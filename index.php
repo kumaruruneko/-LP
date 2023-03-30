@@ -137,7 +137,7 @@
                   <span><img src="src/img/star-left.svg" alt=""></span>
                   <span><img src="src/img/star-right.svg" alt=""></span>
                 </div>
-                <div class="main_logo"><img src="src/img/main_logo.png" alt=""></div>
+                <div class="main_logo" id="main_logo"><img src="src/img/main_logo.png" alt=""></div>
                 <div class="cast">
                   <span><img src="src/img/cast-01.png" alt=""></span>
                   <span><img src="src/img/cast-02.png" alt=""></span>
@@ -156,9 +156,10 @@
 
             <article>
               <section class="section-01">
+                <span id="section-01"></span>
                 <div class="ttl_wrap">
-                  <h2 class="ttl_01">MESSAGE</h2>
-                  <p class="lead">メッセージ</p>
+                  <h2 class="ttl_01 is-set">MESSAGE</h2>
+                  <p class="lead is-set">メッセージ</p>
                 </div>
                 <div class="container">
 
@@ -184,9 +185,10 @@
               </section>
 
               <section class="section-02">
+              <span id="section-02"></span>
                 <div class="ttl_wrap">
-                  <h2 class="ttl_01">IDEAL CANDIDATE</h2>
-                  <p class="lead">求める人物像</p>
+                  <h2 class="ttl_01 is-set">IDEAL CANDIDATE</h2>
+                  <p class="lead is-set">求める人物像</p>
                 </div>
                 <div class="container">
                   <div class="img-box">
@@ -216,9 +218,10 @@
               </section>
 
               <section class="section-03">
+              <span id="section-03"></span>
                 <div class="ttl_wrap">
-                  <h2 class="ttl_01">MEMBER</h2>
-                  <p class="lead">社員紹介</p>
+                  <h2 class="ttl_01 is-set">MEMBER</h2>
+                  <p class="lead is-set">社員紹介</p>
                 </div>
                 <div class="container">
 
@@ -249,9 +252,10 @@
                 </div>
               </section>
               <section class="section-04">
+              <span id="section-04"></span>
                 <div class="ttl_wrap">
-                  <h2 class="ttl_01">WORK LIFE BALANCE</h2>
-                  <p class="lead">ワークライフバランス</p>
+                  <h2 class="ttl_01 is-set">WORK LIFE BALANCE</h2>
+                  <p class="lead is-set">ワークライフバランス</p>
                 </div>
                 <div class="container">
 
@@ -281,9 +285,10 @@
                 </div>
               </section>
               <section class="section-05">
+              <span id="section-05"></span>
                 <div class="ttl_wrap">
-                  <h2 class="ttl_01">ALLOWANCES</h2>
-                  <p class="lead">諸手当</p>
+                  <h2 class="ttl_01 is-set">ALLOWANCES</h2>
+                  <p class="lead is-set">諸手当</p>
                 </div>
                 <div class="container">
                   <div class="contetnts">
@@ -315,9 +320,10 @@
                 </div>
               </section>
               <section class="section-06">
+              <span id="section-06"></span>
                 <div class="ttl_wrap">
-                  <h2 class="ttl_01">BENEFITS</h2>
-                  <p class="lead">福利厚生</p>
+                  <h2 class="ttl_01 is-set">BENEFITS</h2>
+                  <p class="lead is-set">福利厚生</p>
                 </div>
                 <div class="container">
                   <div class="contetnts">
@@ -344,17 +350,18 @@
           </section>
 
           <section class="section-07">
+          <span id="section-07"></span>
             <div class="ttl_wrap">
-              <h2 class="ttl_01">COMPANY SCENERY</h2>
-              <p class="lead">社内風景</p>
+              <h2 class="ttl_01 is-set">COMPANY SCENERY</h2>
+              <p class="lead is-set">社内風景</p>
             </div>
             <img class="icon" src="src/img/bg_section7.jpg" alt="">
           </section>
 
           <section class="section-08">
             <div class="ttl_wrap">
-              <h2 class="ttl_01">REQUIREMENTS</h2>
-              <p class="lead">募集要項</p>
+              <h2 class="ttl_01 is-set">REQUIREMENTS</h2>
+              <p class="lead is-set">募集要項</p>
             </div>
             <div class="container">
             <img class="icon" src="src/img/req-01.png" alt="">
@@ -537,14 +544,26 @@
       <div id="page_top" class="en"><a href="#"></a></div>
 
       <!-- JavaScript -->
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
       <script src="https://www.nonoguchi.net//JS/common.js"></script>
       <script src="https://www.nonoguchi.net//JS/ofi.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
 
-
+<script>
+  $(window).on("load", function () {
+  $('body').addClass('mv-loaded')
+});
+$(".is-set").on("inview", function (event, isInView) {
+  if (isInView) {
+    $(this).addClass("is-action");
+  } else {
+    $(this).removeClass("is-action");
+  }
+  });
+</script>
     </div>
   </div>
 </body>
