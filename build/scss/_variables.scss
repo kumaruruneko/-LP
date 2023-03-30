@@ -1,0 +1,363 @@
+// Variables
+
+// color
+
+$white: #ffffff;
+$gray: #F0F0F0 !default;
+$fa: #fafafa !default;
+$e: #eeeeee !default;
+$gray-text: #777777 !default;
+$gray-title: #999999 !default;
+$label: #f7f4f0;
+$black: #000000;
+$black-bg: #333333;
+$title-bg: #efedd9;
+$gold: #b6ad85;
+$gold-text: #76640f;
+$icon: #aaaaaa;
+$text: #cccccc;
+$border: #dddddd;
+$border-blue: #8094e3;
+$border-purple: #d9e1ff;
+$blue: #0082E6 !default;
+$blue-bg: #edf1ff !default;
+$purple: #7591ff;
+$pink: #f183c8;
+$red: #a20000;
+$red-text: #b60006;
+$orange: #f8833e;
+$sky: #009df2;
+$brown: #db7c0b;
+$yellow: #fff000;
+$green: #00ad00;
+$cyan: #17a2b8;
+$dark: #040000;
+
+//メディアクエリ
+
+$pc: 991px;
+$tb: 768px;
+$sp: 575px;
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tb {
+  @media (max-width: ($tb)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+//snippet
+//グラデーション
+@mixin g-orange {
+  background: linear-gradient(to right, #ff8db0 0, $orange 100%);
+}
+@mixin g-pink {
+  background: linear-gradient(to right, #ff8db0 0, #ff7bba 100%);
+}
+@mixin g-green {
+  background: linear-gradient(to right, #7dc500 0, #1d992f 100%);
+}
+@mixin g-gold {
+  background: linear-gradient(to right, #bda05b 0, #796a29 100%);
+}
+@mixin g-sky {
+  background: linear-gradient(to right, #1da0f3 0, #1da0f3 100%);
+}
+@mixin g-blue {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(4, 66, 156, 1) 0%,
+    rgba(25, 42, 89, 1) 100%
+  );
+}
+@mixin g-recruit {
+  background: linear-gradient(to right, #f65fff 0, #17bfff 100%);
+}
+//ボタン関連
+.btn_area {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  overflow: hidden;
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid $blue;
+    border-radius: 0;
+    background: $blue;
+    color: $white;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    &:hover {
+      background: $white;
+      color: $blue;
+    }
+    &.square {
+      justify-content: center;
+      width: 320px;
+      max-width: 320px;
+      height: 50px;
+      margin: 0 auto;
+      border: 1px solid $black;
+      border-radius: 0;
+      background: $white;
+      color: $black;
+      &::after {
+        position: absolute;
+        right: 1em;
+      }
+    }
+    &_orange {
+      background-color: $orange;
+    }
+    &_black {
+      background-color: $black;
+    }
+  }
+}
+//きらっとするボタン
+.more-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid $black;
+  border-radius: 0;
+  @media (max-width: 440px) {
+    width: 90%;
+  }
+  .more {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 2.2;
+    text-align: center;
+    transition: 0.3s;
+    &:hover {
+      color: $white !important;
+      font-style: italic;
+      cursor: pointer;
+      a {
+        color: $white;
+      }
+      &::after {
+        left: -10%;
+        width: 120%;
+      }
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      left: -10%;
+      z-index: -1;
+      transform: skewX(15deg);
+      width: 0;
+      height: 3px;
+      height: 120%;
+      background: $black;
+      content: "";
+      transition: 0.3s;
+    }
+  }
+}
+// きらっとしないボタン
+.btn-n {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 20px auto;
+  padding: 15px;
+  border: solid 2px $blue;
+  border-radius: 5px;
+  background-color: $blue;
+  color: $white;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+
+  span {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    line-height: 1;
+  }
+
+  &:hover {
+    background-color: #eeeeee;
+    color: $blue;
+  }
+  &::after {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+a.bg_pink:hover {
+  opacity: 0.6;
+  background-color: $pink;
+}
+a.bg_green:hover {
+  opacity: 0.6;
+  background-color: $green;
+}
+
+//fontawesome icon
+.mail {
+  &::before {
+    padding-left: 0.8em;
+    font-weight: 900;
+    font-size: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f0e0";
+  }
+}
+.angle {
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f105";
+  }
+}
+.required {
+  &::after {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: $red;
+    color: $white;
+    font-weight: 900;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    content: "必須";
+  }
+}
+.tel {
+  &::before {
+    font-weight: 900;
+    font-size: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f095";
+  }
+}
+.fax {
+  &::before {
+    font-weight: 900;
+    font-size: 1.5em;
+    font-family: "Font Awesome 5 Free";
+    content: "\f1ac";
+  }
+}
+.pdf {
+  &::before {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f1c1";
+  }
+}
+.movie {
+  &::before {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f1c8";
+  }
+}
+.info-circle {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f05a";
+  }
+}
+
+@function vw($maxScreenSize, $px) {
+  @return (($px / $maxScreenSize) * 100) * 1vw;
+}
+
+@mixin fontsizeVw($maxScreenSize, $px) {
+  font-size: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin w_size($maxScreenSize, $px) {
+  width: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin h_size($maxScreenSize, $px) {
+  height: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin pt($maxScreenSize, $px) {
+  padding-top: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin pb($maxScreenSize, $px) {
+  padding-bottom: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin pr($maxScreenSize, $px) {
+  padding-right: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin pl($maxScreenSize, $px) {
+  padding-left: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin mt($maxScreenSize, $px) {
+  margin-top: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin mb($maxScreenSize, $px) {
+  margin-bottom: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin mr($maxScreenSize, $px) {
+  margin-right: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin ml($maxScreenSize, $px) {
+  margin-left: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin top($maxScreenSize, $px) {
+  top: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin bottom($maxScreenSize, $px) {
+  bottom: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin right($maxScreenSize, $px) {
+  right: (($px / $maxScreenSize) * 100) * 1vw;
+}
+@mixin left($maxScreenSize, $px) {
+  left: (($px / $maxScreenSize) * 100) * 1vw;
+}
+.btn:not([href]):not([tabindex]){
+  color: $white;
+  cursor: pointer;
+}
+a:not([href]):not([tabindex]){
+  cursor: pointer;
+}
