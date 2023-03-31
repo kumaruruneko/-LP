@@ -165,12 +165,12 @@
 
                   <div class="contetnts">
 
-                    <p class="text">
+                    <p class="text is-set">
                       <strong>One for all All for one<br>
                         一人は皆のために、皆は一人のために<br>
                         一人は皆のために、皆は１つの目的のために</strong>
                     </p>
-                    <p class="text">野々口株式会社は創業５０年以上の歴史があり、長い歳月の中で培った知識と経験を保有している会社です。<br>
+                    <p class="text is-set">野々口株式会社は創業５０年以上の歴史があり、長い歳月の中で培った知識と経験を保有している会社です。<br>
                       蓄積した知識と経験を武器に繊維業界で活躍をしております。<br>
                       我が社が取り扱う商材は、人が生きる上で必要不可欠な商品です。<br>
                       取扱商品の使用用途やアイテムは多岐に渡ります。<br>
@@ -179,13 +179,13 @@
                       明るい未来に向かって、我々と共に楽しみましょう。</p>
                   </div>
                   <div class="img-box">
-                    <img src="src/img/message-01.png" alt="">
+                    <img class="is-set rotateY" src="src/img/message-01.png" alt="">
                   </div>
                 </div>
               </section>
 
               <section class="section-02">
-              <span id="section-02"></span>
+                <span id="section-02"></span>
                 <div class="ttl_wrap">
                   <h2 class="ttl_01 is-set">IDEAL CANDIDATE</h2>
                   <p class="lead is-set">求める人物像</p>
@@ -193,11 +193,11 @@
                 <div class="container">
                   <div class="img-box">
                     <img src="src/img/message-02.png" alt="">
-                    <img src="src/img/message-03.png" alt="">
-                    <img src="src/img/message-04.png" alt="">
+                    <img class="is-set" src="src/img/message-03.png" alt="">
+                    <img class="is-set" src="src/img/message-04.png" alt="">
                   </div>
                   <div class="contetnts">
-                    <ul class="text">
+                    <ul class="text is-set">
                       <li>楽しいことが好きな人（エンジョイ）</li>
                       <li>良く笑う人（笑い上戸）</li>
                       <li>泣き虫（悔しがり屋）</li>
@@ -218,24 +218,28 @@
               </section>
 
               <section class="section-03">
-              <span id="section-03"></span>
+                <span id="section-03"></span>
                 <div class="ttl_wrap">
                   <h2 class="ttl_01 is-set">MEMBER</h2>
                   <p class="lead is-set">社員紹介</p>
                 </div>
                 <div class="container">
 
-                  <div class="contetnts">
+                  <div class="contetnts is-set">
                     <?php
                     $persons = [
-                      ['01', '営業', '0000'],
-                      ['02', '営業', '0000'],
-                      ['03', '営業', '0000'],
-                      ['04', '営業', '0000'],
+                      ['01', '営業', '0001','Q入社から今に至る経緯と入社後について','インターネット求人で見つけ、面接に来てみると、和やかな面接で自分に合っていると思い入社を決意しました。<br>
+                      入社後は、円滑に業務を進めていく上で不可欠なDX化に向けて新しいアイディアなどを提案し、実際に取り入れていただきました。少数精鋭かつ発展途上の会社であり、業務改善に積極的で社員の意見をしっかり聞いていただける、今まで社内で誰もやった事がないようなことでも失敗を恐れずにチャレンジできる環境だと思います。'],
+                      ['02', '営業', '0002','Q入社から今に至る経緯と入社後について','インターネット求人で見つけ、面接に来てみると、和やかな面接で自分に合っていると思い入社を決意しました。<br>
+                      入社後は、円滑に業務を進めていく上で不可欠なDX化に向けて新しいアイディアなどを提案し、実際に取り入れていただきました。少数精鋭かつ発展途上の会社であり、業務改善に積極的で社員の意見をしっかり聞いていただける、今まで社内で誰もやった事がないようなことでも失敗を恐れずにチャレンジできる環境だと思います。'],
+                      ['03', '営業', '0003','Q入社から今に至る経緯と入社後について','インターネット求人で見つけ、面接に来てみると、和やかな面接で自分に合っていると思い入社を決意しました。<br>
+                      入社後は、円滑に業務を進めていく上で不可欠なDX化に向けて新しいアイディアなどを提案し、実際に取り入れていただきました。少数精鋭かつ発展途上の会社であり、業務改善に積極的で社員の意見をしっかり聞いていただける、今まで社内で誰もやった事がないようなことでも失敗を恐れずにチャレンジできる環境だと思います。'],
+                      ['04', '営業', '0004','Q入社から今に至る経緯と入社後について','インターネット求人で見つけ、面接に来てみると、和やかな面接で自分に合っていると思い入社を決意しました。<br>
+                      入社後は、円滑に業務を進めていく上で不可欠なDX化に向けて新しいアイディアなどを提案し、実際に取り入れていただきました。少数精鋭かつ発展途上の会社であり、業務改善に積極的で社員の意見をしっかり聞いていただける、今まで社内で誰もやった事がないようなことでも失敗を恐れずにチャレンジできる環境だと思います。'],
                     ]
                     ?>
                     <?php foreach ($persons as $value) : ?>
-                      <div class="pnl">
+                      <div class="pnl" data-pnl_no="<?php echo $value[0]; ?>">
                         <p class="person">
                           <span>PERSON</span>
                           <span><?php echo $value[0]; ?></span>
@@ -247,12 +251,29 @@
                         <p class="join"><?php echo $value[2]; ?>年入社</p>
                       </div>
                     <?php endforeach; ?>
+                    <?php foreach ($persons as $content) : ?>
+                    <div class="message-box" id="person-<?php echo $content[0]; ?>">
+                      <div class="img-box">
+                        <img src="src/img/person-<?php echo $content[0]; ?>_detail.png" alt="">
+                      </div>
+                      <div class="contents-box">
+                        <div class="inner">
+                          <h4><span class="position"><?php echo $content[1]; ?></span><span class="join"><?php echo $content[2]; ?>年入社</span></h4>
+                          <h5><?php echo $content[3]; ?></h5>
+                          <p class="text"><?php echo $content[4]; ?></p>
+                          <div class="btn_area close">
+                            <div class="btn">閉じる</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <?php endforeach; ?>
                   </div>
 
                 </div>
               </section>
               <section class="section-04">
-              <span id="section-04"></span>
+                <span id="section-04"></span>
                 <div class="ttl_wrap">
                   <h2 class="ttl_01 is-set">WORK LIFE BALANCE</h2>
                   <p class="lead is-set">ワークライフバランス</p>
@@ -285,7 +306,7 @@
                 </div>
               </section>
               <section class="section-05">
-              <span id="section-05"></span>
+                <span id="section-05"></span>
                 <div class="ttl_wrap">
                   <h2 class="ttl_01 is-set">ALLOWANCES</h2>
                   <p class="lead is-set">諸手当</p>
@@ -298,7 +319,7 @@
                       $allowances = [
                         ['01', '昇給あり', '年1回（8月）'],
                         ['02', '賞与あり', '年2回（7月・12月）'],
-                        ['03', '交通費全額支給', '年2回（7月・12月）'],
+                        ['03', '交通費', '全額支給'],
                         ['04', '出張手当', 'あり'],
                         ['05', '食事手当', '月7,000円'],
                         ['06', '家族手当', '配偶者：月5,000円<br>子：1人につき月3,000円'],
@@ -320,7 +341,7 @@
                 </div>
               </section>
               <section class="section-06">
-              <span id="section-06"></span>
+                <span id="section-06"></span>
                 <div class="ttl_wrap">
                   <h2 class="ttl_01 is-set">BENEFITS</h2>
                   <p class="lead is-set">福利厚生</p>
@@ -350,7 +371,7 @@
           </section>
 
           <section class="section-07">
-          <span id="section-07"></span>
+            <span id="section-07"></span>
             <div class="ttl_wrap">
               <h2 class="ttl_01 is-set">COMPANY SCENERY</h2>
               <p class="lead is-set">社内風景</p>
@@ -364,7 +385,7 @@
               <p class="lead is-set">募集要項</p>
             </div>
             <div class="container">
-            <img class="icon" src="src/img/req-01.png" alt="">
+              <img class="icon" src="src/img/req-01.png" alt="">
               <img class="icon" src="src/img/req-02.png" alt="">
               <dl>
                 <dt>仕事内容</dt>
@@ -448,10 +469,10 @@
                   <p class="text">交通費(全額)<br>
                     食事手当て(7000円/月)<br>
                     出張手当<br>
-                    住宅手当(2万円/月　独身で実家が近畿圏外の方)<br>
+                    住宅手当(2万円/月　本人名義で住宅費を御支払の方)<br>
                     家族手当(配偶者 : 5000円/月、子：一人につき月3000円/月)<br>
-                    役職手当(1500円/月)<br>
-                    精勤手当(3万円/年)
+                    役職手当(各役職による)<br>
+                    皆勤手当（1500円／月）
                   </p>
                 </dd>
               </dl>
@@ -506,7 +527,7 @@
                     応募から内定まで1カ月</p>
                 </dd>
               </dl>
-             
+
             </div>
             <div class="btn_area">
               <a href="entry" class="btn">ENTRY</a>
@@ -552,18 +573,46 @@
       <script src="https://www.nonoguchi.net//JS/ofi.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
 
-<script>
-  $(window).on("load", function () {
-  $('body').addClass('mv-loaded')
-});
-$(".is-set").on("inview", function (event, isInView) {
-  if (isInView) {
-    $(this).addClass("is-action");
-  } else {
-    $(this).removeClass("is-action");
-  }
-  });
-</script>
+      <script>
+        $(window).on("load", function() {
+          $('body').addClass('mv-loaded')
+        });
+        $(".is-set").on("inview", function(event, isInView) {
+          if (isInView) {
+            $(this).addClass("is-action");
+          } else {
+            $(this).removeClass("is-action");
+            $(this).removeClass("is-detail");
+          }
+        });
+        $(".move").on("inview", function(event, isInView) {
+          if (isInView) {
+            $(this).addClass("on");
+          } else {
+            $(this).removeClass("on");
+          }
+        });
+        $('.section-03 .contetnts .pnl').on('click', function() {
+          if ($(this).hasClass('is-select')) {
+            $('.section-03 .contetnts').removeClass('is-detail')
+            $(this).removeClass('is-select')
+            $(this).removeAttr('style')
+           $('.message-box').removeClass('set')
+          } else {
+            $('.section-03 .contetnts').addClass('is-detail')
+            $(this).css('z-index', '100')
+            $(this).addClass('is-select')
+            var box = $(this).attr('data-pnl_no')
+            $('#person-' + box).addClass('set')
+          }
+        })
+        $('.message-box .btn').on('click',function(){
+          $('.section-03 .contetnts').removeClass('is-detail')
+          $('.message-box').removeClass('set')
+          $('.section-03 .contetnts .pnl').removeClass('is-select')
+          $('.section-03 .contetnts .pnl').removeAttr('style')
+        })
+      </script>
     </div>
   </div>
 </body>
